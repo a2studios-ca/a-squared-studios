@@ -50,25 +50,28 @@ export default function Home() {
 
   const featuredProjects = [
     {
-      title: 'Project Placeholder 1',
-      type: 'Cinematic Reel',
-      result: 'Add your real result here.',
+      title: 'Geared Up',
+      type: 'Cinematic Poster / Music Visual',
+      result: 'Bold, aggressive, high-impact visual identity.',
       description:
-        'Replace this with one of your real projects once your visuals are ready.',
+        'A high-contrast, red-toned visual built to feel intense and attention-grabbing.',
+      image: '/geared-up.jpg',
     },
     {
-      title: 'Project Placeholder 2',
-      type: 'Brand Content',
-      result: 'Add your real result here.',
+      title: 'Automotive Cinematic',
+      type: 'Brand / Product Visual',
+      result: 'Clean, dark, premium aesthetic.',
       description:
-        'Use this card for a business, creator, or event project.',
+        'A sleek, low-light composition focused on detail, reflections, and atmosphere.',
+      image: '/automotive-cinematic.jpg',
     },
     {
-      title: 'Project Placeholder 3',
-      type: 'Event Highlight',
-      result: 'Add your real result here.',
+      title: 'Behind the Lens',
+      type: 'Creator / Studio Visual',
+      result: 'Professional, cinematic, authentic presence.',
       description:
-        'This section is ready for thumbnails, reels, and project details later.',
+        'A strong visual representing the creator and the process behind the work.',
+      image: '/behind-the-lens.jpg',
     },
   ];
 
@@ -76,26 +79,22 @@ export default function Home() {
     {
       step: '01',
       title: 'Discovery',
-      description:
-        'Understand your brand, vision, and goals.',
+      description: 'Understand your brand, vision, and goals.',
     },
     {
       step: '02',
       title: 'Creation',
-      description:
-        'Shoot and edit with cinematic intent and precision.',
+      description: 'Shoot and edit with cinematic intent and precision.',
     },
     {
       step: '03',
       title: 'Refinement',
-      description:
-        'Review and polish for maximum impact.',
+      description: 'Review and polish for maximum impact.',
     },
     {
       step: '04',
       title: 'Delivery',
-      description:
-        'Final content ready to post and perform.',
+      description: 'Final content ready to post and perform.',
     },
   ];
 
@@ -104,8 +103,7 @@ export default function Home() {
       name: 'Starter Growth',
       price: '$500',
       subtitle: '10 short-form videos',
-      description:
-        'Clean, consistent content to build presence.',
+      description: 'Clean, consistent content to build presence.',
       features: [
         'Clean cuts + captions',
         'Basic color grading',
@@ -119,8 +117,7 @@ export default function Home() {
       name: 'Content Engine',
       price: '$800',
       subtitle: '10 short-form videos',
-      description:
-        'High-volume, optimized content for growth.',
+      description: 'High-volume, optimized content for growth.',
       features: [
         'Advanced editing (pacing, SFX, captions)',
         'Trend-based structure',
@@ -134,8 +131,7 @@ export default function Home() {
       name: 'Cinematic Pack',
       price: '$400',
       subtitle: '3 premium videos',
-      description:
-        'Cinematic visuals built for impact and authority.',
+      description: 'Cinematic visuals built for impact and authority.',
       features: [
         'Cinematic storytelling',
         'Film-level color grading',
@@ -150,33 +146,27 @@ export default function Home() {
   const faq = [
     {
       question: 'Who is this for?',
-      answer:
-        'Brands, creators, and businesses looking to stand out online.',
+      answer: 'Brands, creators, and businesses looking to stand out online.',
     },
     {
       question: 'How long does delivery take?',
-      answer:
-        'Usually 24–72 hours depending on the project.',
+      answer: 'Usually 24–72 hours depending on the project.',
     },
     {
       question: 'Do you offer revisions?',
-      answer:
-        'Yes, revisions are included in every package.',
+      answer: 'Yes, revisions are included in every package.',
     },
     {
       question: 'Can I request custom work?',
-      answer:
-        'Yes, custom projects are available based on your needs.',
+      answer: 'Yes, custom projects are available based on your needs.',
     },
     {
       question: 'What do I need to provide?',
-      answer:
-        'Your footage and basic direction, and we handle the rest.',
+      answer: 'Your footage and basic direction, and we handle the rest.',
     },
     {
       question: 'How do I get started?',
-      answer:
-        'Choose a package or reach out through contact.',
+      answer: 'Choose a package or reach out through contact.',
     },
   ];
 
@@ -364,12 +354,12 @@ export default function Home() {
               Featured Work
             </p>
             <h2 className="mt-3 text-3xl font-bold md:text-5xl">
-              Projects to showcase
+              Real visuals. Real presence.
             </h2>
           </div>
 
           <p className="max-w-xl text-sm leading-7 text-white/65">
-            Replace these cards with your real projects, thumbnails, reels, or embedded videos later.
+            A glimpse into the visual direction, quality, and identity behind A² Studios.
           </p>
         </div>
 
@@ -377,20 +367,26 @@ export default function Home() {
           {featuredProjects.map((project) => (
             <div
               key={project.title}
-              className="rounded-[28px] border border-white/10 bg-white/[0.03] p-6 shadow-xl"
+              className="overflow-hidden rounded-[28px] border border-white/10 bg-white/[0.03] shadow-xl"
             >
-              <div className="mb-5 h-56 rounded-2xl bg-gradient-to-br from-red-700/30 to-black" />
-              <p className="text-sm uppercase tracking-[0.2em] text-red-400">
-                {project.type}
-              </p>
-              <h3 className="mt-3 text-2xl font-bold">{project.title}</h3>
-              <p className="mt-3 text-sm leading-7 text-white/65">
-                {project.description}
-              </p>
-              <p className="mt-4 text-sm font-medium text-white">
-                Result:{' '}
-                <span className="text-white/70">{project.result}</span>
-              </p>
+              <img
+                src={project.image}
+                alt={project.title}
+                className="h-72 w-full object-cover"
+              />
+
+              <div className="p-6">
+                <p className="text-sm uppercase tracking-[0.2em] text-red-400">
+                  {project.type}
+                </p>
+                <h3 className="mt-3 text-2xl font-bold">{project.title}</h3>
+                <p className="mt-3 text-sm leading-7 text-white/65">
+                  {project.description}
+                </p>
+                <p className="mt-4 text-sm font-medium text-white">
+                  Result: <span className="text-white/70">{project.result}</span>
+                </p>
+              </div>
             </div>
           ))}
         </div>
