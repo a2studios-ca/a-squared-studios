@@ -71,7 +71,7 @@ export default function Home() {
       result: 'Professional, cinematic, authentic presence.',
       description:
         'A strong visual representing the creator and the process behind the work.',
-      image: '/behind-the-lens.jpg',
+      image: '/behindthelens.jpg',
     },
   ];
 
